@@ -19,3 +19,9 @@
 | Actual        |          4    |       64      |
 | Error         |         -2    |       -6      |
 | Relative Error|         33%   |        8%     |
+
+This data suggests a few things:
+- We are predicting higher for both active cases and new cases.
+ - The first correction is that we need to reduce the probability of spread in the ORANGE zone, which is currently set to 10%. This could suggest that as restrictions are right now, for every active case we currently have we are <10% likely to develop a new case the next day. Of course this assumes the virus has no incubation period, which we of course know to be false. This will be our next correction.  We reduce the probability of spread in the ORANGE zone to 7.5%
+ - The next correction is to assume that it takes 10 days for restrictions to take place. This means now today's zone doesn't affect new cases, but the zone 10 days ago does. This was adjusted by changes to the implementation of the setTransmission method for the Day class
+ 
