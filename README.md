@@ -40,6 +40,7 @@ This is how we make new cases, but we also have to remove people who have recove
 
 | Infection will recover in : |  2 days  |  3 days  | 4 days | 5 days | 6 days | 7 days | 8 days | 9 days | 10 days | 11 days |
 | --------------------------- | -------- | -------- | ------ | ------ | ------ | ------ | ------ | ------ | ------- | --------|
+|                             |    1%    |    3%    |   4%   |   4%   |   10%  |   13%  |   15%  |  20%   |    20%  |    10%  | 
 
 
 # Prediction Results
