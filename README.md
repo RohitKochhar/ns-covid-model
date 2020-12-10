@@ -37,6 +37,7 @@ This data suggests a few things:
 - The above steps were redone on paper to acheive an algorithm with a mean error of = ( -0.2 , -0.6 )
 
 Running the algorithm one final time, we get:
+
 |Day #19 |       7 reported               Active Cases: 77        |
 |Day #20 |       6 reported               Active Cases: 72        |
 |Day #21 |       4 reported               Active Cases: 64        |
