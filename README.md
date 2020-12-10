@@ -37,20 +37,19 @@ This data suggests a few things:
 - The above steps were redone on paper to acheive an algorithm with a mean error of = ( -0.2 , -0.6 )
 
 Running the algorithm one final time, we get:
-Day #19 |       7 reported               Active Cases: 77        |
-Day #20 |       6 reported               Active Cases: 72        |
-Day #21 |       4 reported               Active Cases: 64        |
------------------------------------- Extrapolated Data ----------|
-Day #22 |       2 reported               Active Cases: 56        |
-Day #23 |       3 reported               Active Cases: 50        |
-Day #24 |       2 reported               Active Cases: 40        |
-Day #25 |       4 reported               Active Cases: 35        |
-Day #26 |       1 reported               Active Cases: 34        |
-Day #27 |       7 reported               Active Cases: 36        | 
-Day #28 |       1 reported               Active Cases: 33        |
-Day #29 |       6 reported               Active Cases: 29        |
-Day #30 |       5 reported               Active Cases: 30        |
-Day #31 |       3 reported               Active Cases: 27        | 
+|Day #19 |       7 reported               Active Cases: 77        |
+|Day #20 |       6 reported               Active Cases: 72        |
+|Day #21 |       4 reported               Active Cases: 64        |
+|Day #22 |       2 reported               Active Cases: 56        |
+|Day #23 |       3 reported               Active Cases: 50        |
+|Day #24 |       2 reported               Active Cases: 40        |
+|Day #25 |       4 reported               Active Cases: 35        |
+|Day #26 |       1 reported               Active Cases: 34        |
+|Day #27 |       7 reported               Active Cases: 36        | 
+|Day #28 |       1 reported               Active Cases: 33        |
+|Day #29 |       6 reported               Active Cases: 29        |
+|Day #30 |       5 reported               Active Cases: 30        |
+|Day #31 |       3 reported               Active Cases: 27        | 
 
 Here, our algoritm predicts the cases for Day #20 within 1 correct value of the actual result and predicts Day #20 perfectly. 
 - With this iteration, we predict 2 new cases tomorrow and 56 active cases in total
