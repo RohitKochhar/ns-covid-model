@@ -18,25 +18,25 @@ class Case():
         # We need to generate a random number between 0 and 100
         i_Random = random.randint(0,100)
         if i_Random <= 1:
-            self.i_RemovedOn = self.i_DiagnosedOn+1
-        elif i_Random > 1 and i_Random <= 3:
             self.i_RemovedOn = self.i_DiagnosedOn+2
-        elif i_Random > 3 and i_Random <= 6:
+        elif i_Random > 1 and i_Random <= 4:
             self.i_RemovedOn = self.i_DiagnosedOn+3
-        elif i_Random > 6 and i_Random <= 12:
+        elif i_Random > 4 and i_Random <= 8:
             self.i_RemovedOn = self.i_DiagnosedOn+4
-        elif i_Random > 12 and i_Random <= 24:
+        elif i_Random > 8 and i_Random <= 12:
             self.i_RemovedOn = self.i_DiagnosedOn+5
-        elif i_Random > 24 and i_Random <= 48:
+        elif i_Random > 12 and i_Random <= 25:
             self.i_RemovedOn = self.i_DiagnosedOn+6
-        elif i_Random > 48 and i_Random <= 72:
+        elif i_Random > 25 and i_Random <= 38:
             self.i_RemovedOn = self.i_DiagnosedOn+7
-        elif i_Random > 72 and i_Random <= 78:
+        elif i_Random > 38 and i_Random <= 48:
             self.i_RemovedOn = self.i_DiagnosedOn+8
-        elif i_Random > 78 and i_Random <= 90:
+        elif i_Random > 48 and i_Random <= 78:
             self.i_RemovedOn = self.i_DiagnosedOn+9
-        elif i_Random > 90 and i_Random <= 100:
+        elif i_Random > 78 and i_Random <= 88:
             self.i_RemovedOn = self.i_DiagnosedOn+10
+        elif i_Random > 88 and i_Random <= 100:
+            self.i_RemovedOn = self.i_DiagnosedOn+11
 
     def setSurvived(self):
         i_Random = random.randint(0,101)
@@ -49,7 +49,6 @@ class Case():
         self.i_ActiveFor = self.i_RemovedOn - self.i_DiagnosedOn
 
     def getsRemovedToday(self, i_CurrentDayNum):
-        print(f"{self.i_RemovedOn} -> {i_CurrentDayNum}")
         if self.i_RemovedOn == i_CurrentDayNum:
             self.b_GetsRemovedToday = True
         else:

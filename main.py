@@ -14,4 +14,8 @@ for i in range(0, len(a_InputData)):
     print(o_Province.d_CaseHistory[f"day-{i}"])
 
 
+print("--------------------- Extrapolating Next Weeks Data ------------------")
 
+print(f"Day # \t\tNew Cases\t\tActive Cases\t\tOperation Zone")
+for i in range(len(a_InputData), len(a_InputData)+9):
+    print(o_Province.d_CaseHistory[f"day-{i}"])

@@ -8,7 +8,6 @@ class Day():
         self.i_NewCases             = i_NewCases
 
         # Constructions
-        self.setZone()
 
         # We need to create as many new cases objects as we are told to
         self.a_NewCases  = []
@@ -22,17 +21,23 @@ class Day():
         self.a_Recoveries = []
         self.setRecoveries()
 
+        self.f_Transmission    = 0
+        self.setZone()
+
         self.updateActiveCases()
 
     def setZone(self):
-        if self.i_NewCases >= 20:
-            self.s_Zone =   "RED"
+        if len(self.a_ActiveCases) >= 100:
+            self.s_Zone             = "RED"
+            self.f_Transmission     = 0.05
             return
-        elif self.i_NewCases >= 10 and self.i_NewCases < 20:
-            self.s_Zone =   "ORANGE"
+        elif len(self.a_ActiveCases) >= 50 and len(self.a_ActiveCases) < 100:
+            self.s_Zone             = "ORANGE"
+            self.f_Transmission     = 0.10
             return
         else:
-            self.s_Zone =   "YELLOW"
+            self.s_Zone             = "YELLOW"
+            self.f_Transmission     = 0.15
             return        
 
     def setNewCases(self):

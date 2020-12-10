@@ -27,4 +27,19 @@ def GetRecoveryDistribution():
     
     plt.bar(a_XValues, a_YValues)
     
-GetRecoveryDistribution()
+def SimulateDistribution():
+    print("Creating Province object...")
+    o_Province = Province(a_InputData)
+
+    print(f"Day # \t\tNew Cases\t\tActive Cases\t\tOperation Zone")
+    
+    i_AverageFinalVaue  =   0
+    for i in range(0, 1000):
+        for i in range(0, len(a_InputData)):
+            print(o_Province.d_CaseHistory[f"day-{i}"])
+            i_FinalActiveCases = len(o_Province.d_CaseHistory[f"day-{i}"].a_ActiveCases)        
+        i_AverageFinalVaue += i_FinalActiveCases
+    print(i_AverageFinalVaue/1000)
+
+
+SimulateDistribution()
