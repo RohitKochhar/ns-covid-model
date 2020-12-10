@@ -54,7 +54,11 @@ Running the algorithm one final time, we get:
 |Day #30 |       5 reported       |       Active Cases: 30        |
 |Day #31 |       3 reported       |       Active Cases: 27        | 
 
-Here, our algoritm predicts the cases for Day #20 within 1 correct value of the actual result and predicts Day #20 perfectly. 
-- With this iteration, we predict 2 new cases tomorrow and 56 active cases in total
+Here, our algoritm predicts the cases for Day #20 within 1 correct value of the actual result and predicts Day #21 perfectly. 
+
+### Prediction
+|             |        New Cases             |             Active Cases         |
+| ----------- | ---------------------------- | -------------------------------- |
+| Day #22     |  Likely 2, in range(0,4)     |  Likely 56, in range(0, 50)      |
 
  
