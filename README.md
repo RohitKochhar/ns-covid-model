@@ -46,9 +46,11 @@ When a new case is created, predict it will recover in an amount of days predict
 
 From this, it becomes clear to see that the main signal in our system is active cases. The higher the active cases, the tighter the restrictions and the lesser the transmission rate, less new infection while cases recover at a steady rate, causing the active cases to decrease over a period of 10 days. The lower the active cases, the higher the risk of transmission.
 
-It's important to note that even in the YELLOW zone, **transmission rate must be kept below 1** . That is, even in the YELLOW zone, the chance of a new infection for a given existing infection must be less than one, so tight restrictions must still be in place.
+It's important to note that even in the YELLOW zone, **transmission rate must be kept below 1**. That is, even in the YELLOW zone, the chance of a new infection for a given existing infection must be less than one, so tight restrictions must still be in place. This is the only way that the system will converge to zero, otherwise we would never leave the yellow zone.
 
-# Prediction Results
+Each day I will log a prediction below based on the newest changes to the system. Each day I get a new piece of data to verify the system against so the prediction gets better each day.
+
+# Predictions
 ## Iteration 0 - 2020-12-09
 - We want to predict the number of active cases and the number of new cases expected
 - We only have 2 data points for the number of active cases, which is at day 0 (=0) and at today (=71)
