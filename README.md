@@ -42,6 +42,11 @@ This is how we make new cases, but we also have to remove people who have recove
 | --------------------------- | -------- | -------- | ------ | ------ | ------ | ------ | ------ | ------ | ------- | --------|
 |                             |    1%    |    3%    |   4%   |   4%   |   10%  |   13%  |   15%  |  20%   |    20%  |    10%  | 
 
+When a new case is created, predict it will recover in an amount of days predicted by the above distribution. That many days later, it is removed from the active cases
+
+From this, it becomes clear to see that the main signal in our system is active cases. The higher the active cases, the tighter the restrictions and the lesser the transmission rate, less new infection while cases recover at a steady rate, causing the active cases to decrease over a period of 10 days. The lower the active cases, the higher the risk of transmission.
+
+It's important to note that even in the YELLOW zone, **transmission rate must be kept below 1** . That is, even in the YELLOW zone, the chance of a new infection for a given existing infection must be less than one, so tight restrictions must still be in place.
 
 # Prediction Results
 ## Iteration 0 - 2020-12-09
