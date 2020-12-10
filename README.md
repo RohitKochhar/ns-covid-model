@@ -56,9 +56,10 @@ Running the algorithm one final time, we get:
 
 Here, our algoritm predicts the cases for Day #20 within 1 correct value of the actual result and predicts Day #21 perfectly. 
 
-### Prediction
+- Given our mean error, we make the following predictions
+### Predictions
 |             |        New Cases             |             Active Cases         |
 | ----------- | ---------------------------- | -------------------------------- |
-| Day #22     |  Likely 2, in range(0,4)     |  Likely 56, in range(0, 50)      |
+| Day #22     |  Likely 3, in range(1,6)     |  Likely 56, in range(49, 62)     |
 
  
