@@ -1,5 +1,11 @@
 # ns-covid-model
- A Control Systems overview of the COVID-19 Response of the Nova Scotian Government
+A Control Systems overview of the COVID-19 Response of the Nova Scotian Government
+ 
+## Abstract
+I am amazed by the response of the Nova Scotian government in handling the COVID-19 pandemic. Earlier this month we had a peak of 31 cases to which the government quickly responded and tightened restrictions. This response was like an effective control system, so I decided to try and model it like one.
+
+The data scope for this project is from Nova Scotia's second wave, which is a period I've defined as from November 19th onward. Attached is a graph over this period, from CBC.
+
 
 # Prediction Results
 ## Iteration 0 - 2020-12-09
