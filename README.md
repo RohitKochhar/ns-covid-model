@@ -25,4 +25,34 @@ This data suggests a few things:
  - The first correction is that we need to reduce the probability of spread in the ORANGE zone, which is currently set to 10%. This could suggest that as restrictions are right now, for every active case we currently have we are <10% likely to develop a new case the next day. Of course this assumes the virus has no incubation period, which we of course know to be false. This will be our next correction.  We reduce the probability of spread in the ORANGE zone to 7.5%
  - The next correction is to assume that it takes 10 days for restrictions to take place. This means now today's zone doesn't affect new cases, but the zone 10 days ago does. This was adjusted by changes to the implementation of the setTransmission method for the Day class
  - I also know that there is an issue with how we remove active cases and the active cases count doesn't make sense for some predictions, this took a while to fix but now the code is bug free (as far as I know)
+ - I now have 2 data points to test the active case prediction on, on Day #20 we had 71 active cases and on Day #21 we had 64
+  - On first run, the algorithm predicts 81 and 68, respectively, which are both too high, so we lower the parameters
+  - On 2nd iteration: Prediction = (68, 61), Both too low
+  - On 3rd iteration: Prediction = (72, 64), About perfect
+  
+- We got as close as possible, now let's find the error range.
+- We run the experiment 10 times and get data in the form (ActiveCases on day #20, ActiveCases on day #21): [(70, 61), (69, 65), (65, 61), (72, 63), (74, 64), (68, 57), (67, 60), (68, 60), (71, 63), (67, 59)]
+ - Getting the error for these values = [(-1, -3), (-2, +1), (-6, -3), (+1, -1), (+3, 0), (-3, -7), (-4, -4), (-3, -4), (0, -1), (-4, -5)]
+- We have a mean error of ( -1.9 , -2.8 ), we should repeat this process to reiterate on the algorithm
+- The above steps were redone on paper to acheive an algorithm with a mean error of = ( -0.2 , -0.6 )
+
+Running the algorithm one final time, we get:
+Day #19 |       7 reported               Active Cases: 77                Operating in ORANGE zone
+Day #20 |       6 reported               Active Cases: 72                Operating in ORANGE zone
+Day #21 |       4 reported               Active Cases: 64                Operating in ORANGE zone
+------------------------------------ Extrapolated Data ------------------------------------------
+Day #22 |       2 reported               Active Cases: 56                Operating in ORANGE zone
+Day #23 |       3 reported               Active Cases: 50                Operating in ORANGE zone
+Day #24 |       2 reported               Active Cases: 40                Operating in YELLOW zone
+Day #25 |       4 reported               Active Cases: 35                Operating in YELLOW zone
+Day #26 |       1 reported               Active Cases: 34                Operating in YELLOW zone
+Day #27 |       7 reported               Active Cases: 36                Operating in YELLOW zone
+Day #28 |       1 reported               Active Cases: 33                Operating in YELLOW zone
+Day #29 |       6 reported               Active Cases: 29                Operating in YELLOW zone
+Day #30 |       5 reported               Active Cases: 30                Operating in YELLOW zone
+Day #31 |       3 reported               Active Cases: 27                Operating in YELLOW zone
+
+Here, our algoritm predicts the cases for Day #20 within 1 correct value of the actual result and predicts Day #20 perfectly. 
+- With this iteration, we predict 2 new cases tomorrow and 56 active cases in total
+
  
