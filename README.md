@@ -161,7 +161,7 @@ Running the algorithm one final time, we get:
 ### Predictions
 |             |        New Cases             |             Active Cases         |
 | ----------- | ---------------------------- | -------------------------------- |
-| Day #22     |  Likely 8, in range(3,15)    |  Likely 60, in range(50, 70)     |
+| Day #23     |  Likely 8, in range(3,15)    |  Likely 60, in range(50, 70)     |
 
 
 
