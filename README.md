@@ -15,7 +15,7 @@ a_Input data is an array where each entry is the amount of cases that day. So on
 
 **Using this data, my model is able to predict how COVID will spread in the community up to a week in advance.**
 
-I get the number of active cases from my MLA's Official Government FaceBook page. I use these values to validate my own model to make sure I can successfully predict days which I have the data for. By doing this, every day my model becomes better at predicting the number of active cases.
+I get the number of active cases from my MLA's Official Government Facebook page. I use these values to validate my own model to make sure I can successfully predict days which I have the data for. By doing this, every day my model becomes better at predicting the number of active cases.
 
 `a_ActualActiveCases = [0, 0, 0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0, 0, 0, 0, 0, 71, 64]`
 
