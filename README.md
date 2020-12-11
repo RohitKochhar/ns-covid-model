@@ -111,4 +111,58 @@ Here, our algoritm predicts the cases for Day #20 within 1 correct value of the 
 | ----------- | ---------------------------- | -------------------------------- |
 | Day #22     |  Likely 3, in range(1,6)     |  Likely 56, in range(49, 62)     |
 
+## Iteration 2: 2020-12-11
+Today the province reported 9 new cases bringing the active total cases to to 65. This highlights an interesting result.
+|             |        New Cases             |             Active Cases         |
+| ----------- | ---------------------------- | -------------------------------- |
+| Prediction  |  Likely 3, in range(1,6)     |  Likely 56, in range(49, 62)     |
+| Actual      |  9                           |  65                              |
+| Error       | +6                           |  9                               |
+
+- There are 3 active outbreaks, which my program does not account for. This is explains the high error in the new cases reported, and since we underpredicted the number of active cases, since we didn't add enough new cases. If we had correctly predicted the number of cases, we would have been much closer to the true number of active cases.
+
+- To correct this error, we have to increase the transmission coefficients to correctly predict the right new cases. I have adjusted the transmission coefficients to be:
+ - RED zone:    7.5%
+ - ORANGE zone: 10%
+ - YELLOW zone: 15%
+ 
+- The recovery distribution was also adjusted to adjust for the under prediction in active cases. It now looks as follows:
+
+| Infection will recover in : |  2 days  |  3 days  | 4 days | 5 days | 6 days | 7 days | 8 days | 9 days | 10 days | 11 days |
+| --------------------------- | -------- | -------- | ------ | ------ | ------ | ------ | ------ | ------ | ------- | --------|
+|                             |    1%    |    3%    |   4%   |   4%   |   10%  |   13%  |   15%  |  20%   |    28%  |    12%  | 
+
+- I validated this against our active cases, running 5 trials with expected results of 71, 64, 65, we get the following results
+
+`76, 67, 63 ; 71, 64, 61 ; 76, 62, 62 ; 73, 58, 56; 80, 73, 67`
+
+Giving us a spread of: `71-80, 58-73, 61-67`, with a mean value of `75.2, 64.8, 61.8`. From this spread of data, we see that our error margins are still pretty high, so a wider range of predictions is still required
+
+Running the algorithm one final time, we get:
+
+|        |       New Cases        |       Active Cases            |
+| ------ |:----------------------:| -----------------------------:|
+|Day #19 |       7 reported       |       Active Cases: 83        |
+|Day #20 |       6 reported       |       Active Cases: 80        |
+|Day #21 |       4 reported       |       Active Cases: 73        |
+|Day #22 |       9 reported       |       Active Cases: 67        |
+|Day #23 |       8 reported       |       Active Cases: 60        |
+|Day #24 |       6 reported       |       Active Cases: 52        |
+|Day #25 |       4 reported       |       Active Cases: 50        |
+|Day #26 |       5 reported       |       Active Cases: 45        |
+|Day #27 |       4 reported       |       Active Cases: 44        | 
+|Day #28 |       1 reported       |       Active Cases: 33        |
+|Day #29 |       6 reported       |       Active Cases: 29        |
+|Day #30 |       5 reported       |       Active Cases: 30        |
+|Day #31 |       3 reported       |       Active Cases: 27        | 
+
+
+- Given our mean error, we make the following predictions
+### Predictions
+|             |        New Cases             |             Active Cases         |
+| ----------- | ---------------------------- | -------------------------------- |
+| Day #22     |  Likely 8, in range(3,15)    |  Likely 60, in range(50, 70)     |
+
+
+
  
