@@ -163,6 +163,21 @@ Running the algorithm one final time, we get:
 | ----------- | ---------------------------- | -------------------------------- |
 | Day #23     |  Likely 8, in range(3,15)    |  Likely 60, in range(50, 70)     |
 
+## Iteration 3 2020-12-12
+- Today the province reported 7 new cases with 61 active cases.
+- Yesterday we predicted 8 new cases with 60 active cases, so both predictions were only off by 1.
+- Since there was so litte error, I've decided not to change the algorithm at all and to just provide updated predictions for tomorrow
+
+### Predictions
+After adding in our newest values, we run the program again to get the following predictions:
+![alt text](https://github.com/RohitKochhar/ns-covid-model/blob/main/imgs/dec12prediction.png?raw=true)
+
+For the error bounds, I'm giving my own bounds which predict that our results are likely undervalued. This is just because the trendline in this graph seems optimistically low, so the data should be interpreted accodingly
+
+With error bounds, tomorrow's prediction is:
+- Likely 4 new cases, in range(2,8)
+- Likely 51 active cases, in range(45,60)
+
 
 
  
