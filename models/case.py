@@ -33,9 +33,9 @@ class Case():
             self.i_RemovedOn = self.i_DiagnosedOn+8
         elif i_Random > 50 and i_Random <= 70:
             self.i_RemovedOn = self.i_DiagnosedOn+9
-        elif i_Random > 70 and i_Random <= 90:
+        elif i_Random > 70 and i_Random <= 88:
             self.i_RemovedOn = self.i_DiagnosedOn+10
-        elif i_Random > 90 and i_Random <= 100:
+        elif i_Random > 88 and i_Random <= 100:
             self.i_RemovedOn = self.i_DiagnosedOn+11
 
     def setSurvived(self):

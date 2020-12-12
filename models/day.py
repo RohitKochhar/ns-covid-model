@@ -46,9 +46,9 @@ class Day():
             # Get the zone from the relevant day
             o_Day = self.d_PreviousData[f'day-{self.i_DayNumber - self.i_RestrictionDelay}']
             if o_Day.s_Zone == "RED":
-                self.f_Transmission     = 0.05
-            elif o_Day.s_Zone == "ORANGE":
                 self.f_Transmission     = 0.075
+            elif o_Day.s_Zone == "ORANGE":
+                self.f_Transmission     = 0.10
             else:
                 self.f_Transmission     = 0.15
 
