@@ -191,5 +191,15 @@ With error bounds, tomorrow's prediction is:
 - Likely 7 new cases, in range(3,10)
 - Likely 53 active cases, in range(45,60)
 
+## Iteration 5 2020-12-14
+- Today the province reported 5 new cases with 57 active cases.
+- Yesterday we predicted 7 new cases with 53 active cases, so both predictions we we only off by 2 with new case prediction and off by 4 with active case prediction.
+- Since this algorithm predicted such a high degree of accuracy yesterday over the last 3 days I am not make any further adjustments
 
- 
+### Predictions
+After adding in our newest values, we run the program again to get the following predictions:
+![alt text](https://github.com/RohitKochhar/ns-covid-model/blob/main/imgs/dec14prediction.png?raw=true)
+
+With error bounds, tomorrow's prediction is:
+- Likely 5, in range 3-10
+- Likely 48, in range 40-58
